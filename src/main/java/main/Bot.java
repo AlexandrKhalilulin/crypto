@@ -17,11 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bot extends TelegramLongPollingBot {
-    Bitcoin bitcoin = new Bitcoin("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82&aqs=chrome.0.69i59j69i57j0i512l2j0i131i433i512j0i512l5.5783j0j9&sourceid=chrome&ie=UTF-8", "pclqee", "Bitcoin");
-    Ether ether = new Ether("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%8D%D1%84%D0%B8%D1%80&sxsrf=AOaemvImqsXyUQUIpaFf6hu6q4hlDlH-9g%3A1638547805340&ei=XUGqYYOXFOfrrgS-jY-ICQ&ved=0ahUKEwjDuYmfgsj0AhXntYsKHb7GA5EQ4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D1%8D%D1%84%D0%B8%D1%80&gs_lcp=Cgdnd3Mtd2l6EAMyCQgjECcQRhCCAjIECCMQJzIHCAAQsQMQQzIHCAAQsQMQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQRxCwAzoHCAAQsAMQQzoHCAAQgAQQCjoJCAAQgAQQChAqOgYIABAWEB46CAgAEBYQChAeOgQIABBDOgsIABCABBCxAxCDAToICAAQgAQQsQNKBAhBGABKBAhGGABQ5AlY4yRgyyZoCHACeACAAYQBiAHHCpIBBDAuMTGYAQCgAQHIAQrAAQE&sclient=gws-wiz", "pclqee", "Ethereum");
+    Bitcoin bitcoin = new Bitcoin("https://ru.investing.com/crypto/shiba-inu", "pid-1057391-last", "Shiba Inu");
+    Ether ether = new Ether("https://ru.investing.com/crypto/shiba-inu", "pid-1061443-last", "Shiba Inu");
     ShibaInu shibaInu = new ShibaInu("https://ru.investing.com/crypto/shiba-inu", "pid-1177506-last", "Shiba Inu");
-    Doge doge = new Doge("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0&sxsrf=AOaemvIvvGuEYrXYwDGKA_Sz2lx1TXmtRQ%3A1638549863931&ei=Z0mqYYafOOzKrgSi77KICA&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B4&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIECCMQJzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMgUIABCABDILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATIICAAQgAQQsQMyDggAEIAEELEDEIMBEMkDOgcIIxCwAxAnOgcIABBHELADOgcIABCwAxBDOhAILhDHARDRAxDIAxCwAxBDOhAILhDHARCjAhDIAxCwAxBDOgoIABCABBCHAhAUOgcIABCABBAKOgQIABBDSgQIQRgASgQIRhgBUI4JWL8SYJ4baAJwAngAgAF7iAHbApIBAzAuM5gBAKABAcgBEsABAQ&sclient=gws-wiz", "pclqee", "Doge");
-
+    Doge doge = new Doge("https://ru.investing.com/crypto/shiba-inu", "pid-1061477-last", "Shiba Inu");
     private String botUsername = "crypto_shekel_bot";
 
     private String botToken = "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
