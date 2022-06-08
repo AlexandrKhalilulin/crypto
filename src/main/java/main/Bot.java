@@ -22,14 +22,17 @@ public class Bot extends TelegramLongPollingBot {
     ShibaInu shibaInu = new ShibaInu("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=rsagYt-qAoPurgTdh5LQCA&ved=0ahUKEwjfufT8m574AhUDt4sKHd2DBIoQ4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgQIABANOgYIABAeEAc6CAgAEB4QCBAHOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggJKBQg8EgE1SgQIQRgASgQIRhgAULkJWOkZYOgbaAVwAXgAgAHZAYgBngmSAQUzLjYuMZgBAKABAcgBCMABAQ&sclient=gws-wiz", "IZ6rdc", "Shiba Inu");
     Doge doge = new Doge("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=bMagYrlCo7KuBMSXkPAL&ved=0ahUKEwi5qLbdm574AhUjmYsKHcQLBL4Q4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgcIABCwAxBDOhIILhDHARDRAxDIAxCwAxBDGAE6EgguEMcBEKMCEMgDELADEEMYAToGCAAQHhAHOgQIABANOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggI6CAgAEB4QBxAKOggIABAeEAgQB0oGCDwSAjEwSgQIQRgASgQIRhgAULwKWOM8YPk-aApwAXgAgAF4iAH5CZIBAzMuOZgBAKABAcgBDcABAdoBBAgBGAg&sclient=gws-wiz", "pclqee", "Doge");
 
+    private String botName = "crypto_shekel_bot";
+    private String botToken = "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
+
     @Override
     public String getBotUsername() {
-        return "crypto_shekel_bot";
+        return botName;
     }
 
     @Override
     public String getBotToken() {
-        return "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
+        return botToken;
     }
 
     @Override
