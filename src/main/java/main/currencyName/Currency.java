@@ -32,7 +32,7 @@ public class Currency {
     public String getExchangeRate() {
         Elements elements1 = document.getElementsByClass(className);
         String timeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
-        return elements1.text() + " руб. - курс " + currencyName + " на: " + timeStamp;
+        return elements1.text() + " usd - курс " + currencyName + " на: " + timeStamp;
     }
 
 }

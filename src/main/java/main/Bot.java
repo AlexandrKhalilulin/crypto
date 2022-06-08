@@ -17,22 +17,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bot extends TelegramLongPollingBot {
-    Bitcoin bitcoin = new Bitcoin("https://ru.investing.com/crypto/shiba-inu", "pid-1057391-last", "Shiba Inu");
-    Ether ether = new Ether("https://ru.investing.com/crypto/shiba-inu", "pid-1061443-last", "Shiba Inu");
-    ShibaInu shibaInu = new ShibaInu("https://ru.investing.com/crypto/shiba-inu", "pid-1177506-last", "Shiba Inu");
-    Doge doge = new Doge("https://ru.investing.com/crypto/shiba-inu", "pid-1061477-last", "Shiba Inu");
-    private String botUsername = "crypto_shekel_bot";
-
-    private String botToken = "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
+    Bitcoin bitcoin = new Bitcoin("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=q8OgYrClOYvsrgTO7IT4BA&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0+%D0%B2+&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6CggAEEcQsAMQyQM6BwgAELADEEM6EgguEMcBENEDEMgDELADEEMYAToSCC4QxwEQowIQyAMQsAMQQxgBOgsIABCABBCxAxCDAUoFCDwSATFKBAhBGABKBAhGGABQVljJA2DXDmgBcAF4AIABZogBoAKSAQMyLjGYAQCgAQHIAQ3AAQHaAQQIARgI&sclient=gws-wiz", "pclqee", "Bitcoin");
+    Ether ether = new Ether("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%8D%D1%84%D0%B8%D1%80%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=VcagYv7XIuXyqwHqhaqgAw&oq=%D0%BA%D1%83%D1%80%D1%81+%27abh%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMYADIECAAQDTIECAAQDTIECAAQDTIECAAQDTIICAAQHhAIEA06BwgAEEcQsAM6CggAEEcQsAMQyQM6BwgAELADEEM6EgguEMcBENEDEMgDELADEEMYAToSCC4QxwEQowIQyAMQsAMQQxgBOgYIABAeEA06CAgAEB4QDxANOggIABAeEA0QBToKCAAQHhAHEAoQKkoFCDwSATJKBAhBGABKBAhGGAFQjgpYgw9ggxpoAnABeACAAYUBiAHpA5IBAzAuNJgBAKABAcgBEcABAdoBBggBEAEYCA&sclient=gws-wiz", "pclqee", "Ethereum");
+    ShibaInu shibaInu = new ShibaInu("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=rsagYt-qAoPurgTdh5LQCA&ved=0ahUKEwjfufT8m574AhUDt4sKHd2DBIoQ4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgQIABANOgYIABAeEAc6CAgAEB4QCBAHOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggJKBQg8EgE1SgQIQRgASgQIRhgAULkJWOkZYOgbaAVwAXgAgAHZAYgBngmSAQUzLjYuMZgBAKABAcgBCMABAQ&sclient=gws-wiz", "IZ6rdc", "Shiba Inu");
+    Doge doge = new Doge("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=bMagYrlCo7KuBMSXkPAL&ved=0ahUKEwi5qLbdm574AhUjmYsKHcQLBL4Q4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgcIABCwAxBDOhIILhDHARDRAxDIAxCwAxBDGAE6EgguEMcBEKMCEMgDELADEEMYAToGCAAQHhAHOgQIABANOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggI6CAgAEB4QBxAKOggIABAeEAgQB0oGCDwSAjEwSgQIQRgASgQIRhgAULwKWOM8YPk-aApwAXgAgAF4iAH5CZIBAzMuOZgBAKABAcgBDcABAdoBBAgBGAg&sclient=gws-wiz", "pclqee", "Doge");
 
     @Override
     public String getBotUsername() {
-        return botUsername;
+        return "crypto_shekel_bot";
     }
 
     @Override
     public String getBotToken() {
-        return botToken;
+        return "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
     }
 
     @Override
@@ -105,7 +102,6 @@ public class Bot extends TelegramLongPollingBot {
         sendMessage.setChatId(message.getChatId().toString());
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setText(text);
-
 
         try {
             execute(sendMessage);
