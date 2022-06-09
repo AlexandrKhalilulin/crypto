@@ -3,7 +3,7 @@ package main;
 import main.currencyName.Bitcoin;
 import main.currencyName.Doge;
 import main.currencyName.Ether;
-import main.currencyName.ShibaInu;
+import main.currencyName.ETC;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -17,10 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bot extends TelegramLongPollingBot {
-    Bitcoin bitcoin = new Bitcoin("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=q8OgYrClOYvsrgTO7IT4BA&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0+%D0%B2+&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6CggAEEcQsAMQyQM6BwgAELADEEM6EgguEMcBENEDEMgDELADEEMYAToSCC4QxwEQowIQyAMQsAMQQxgBOgsIABCABBCxAxCDAUoFCDwSATFKBAhBGABKBAhGGABQVljJA2DXDmgBcAF4AIABZogBoAKSAQMyLjGYAQCgAQHIAQ3AAQHaAQQIARgI&sclient=gws-wiz", "pclqee", "Bitcoin");
-    Ether ether = new Ether("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%8D%D1%84%D0%B8%D1%80%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=VcagYv7XIuXyqwHqhaqgAw&oq=%D0%BA%D1%83%D1%80%D1%81+%27abh%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMYADIECAAQDTIECAAQDTIECAAQDTIECAAQDTIICAAQHhAIEA06BwgAEEcQsAM6CggAEEcQsAMQyQM6BwgAELADEEM6EgguEMcBENEDEMgDELADEEMYAToSCC4QxwEQowIQyAMQsAMQQxgBOgYIABAeEA06CAgAEB4QDxANOggIABAeEA0QBToKCAAQHhAHEAoQKkoFCDwSATJKBAhBGABKBAhGGAFQjgpYgw9ggxpoAnABeACAAYUBiAHpA5IBAzAuNJgBAKABAcgBEcABAdoBBggBEAEYCA&sclient=gws-wiz", "pclqee", "Ethereum");
-    ShibaInu shibaInu = new ShibaInu("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=rsagYt-qAoPurgTdh5LQCA&ved=0ahUKEwjfufT8m574AhUDt4sKHd2DBIoQ4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D1%88%D0%B8%D0%B1%D0%B0+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgQIABANOgYIABAeEAc6CAgAEB4QCBAHOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggJKBQg8EgE1SgQIQRgASgQIRhgAULkJWOkZYOgbaAVwAXgAgAHZAYgBngmSAQUzLjYuMZgBAKABAcgBCMABAQ&sclient=gws-wiz", "IZ6rdc", "Shiba Inu");
-    Doge doge = new Doge("https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&ei=bMagYrlCo7KuBMSXkPAL&ved=0ahUKEwi5qLbdm574AhUjmYsKHcQLBL4Q4dUDCA4&uact=5&oq=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%B3%D0%B8+%D0%B2+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0%D1%85&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgcIABCwAxBDOhIILhDHARDRAxDIAxCwAxBDGAE6EgguEMcBEKMCEMgDELADEEMYAToGCAAQHhAHOgQIABANOgYIABAeEA06CAgAEB4QDxANOgkIABANEEYQggI6CAgAEB4QBxAKOggIABAeEAgQB0oGCDwSAjEwSgQIQRgASgQIRhgAULwKWOM8YPk-aApwAXgAgAF4iAH5CZIBAzMuOZgBAKABAcgBDcABAdoBBAgBGAg&sclient=gws-wiz", "pclqee", "Doge");
+    Bitcoin bitcoin = new Bitcoin("https://myfin.by/crypto-rates/bitcoin", "col-md-6 col-xs-12", "Bitcoin");
+    Ether ether = new Ether("https://myfin.by/crypto-rates/ethereum", "col-md-6 col-xs-12", "Ethereum");
+    ETC etc = new ETC("https://myfin.by/crypto-rates/ethereumclassic", "col-md-6 col-xs-12", "Ethereum Classic");
+    Doge doge = new Doge("https://myfin.by/crypto-rates/dogecoin", "col-md-6 col-xs-12", "Doge");
 
     private String botName = "crypto_shekel_bot";
     private String botToken = "5200282202:AAFuDqotprQZEjaBE_iLw0FyvpV5svBoILQ";
@@ -66,9 +66,9 @@ public class Bot extends TelegramLongPollingBot {
                     }
                     break;
 
-                case "shiba":
+                case "etc":
                     try {
-                        execute(new SendMessage(chat_Id, shibaInu.getExchangeRate()));
+                        execute(new SendMessage(chat_Id, etc.getExchangeRate()));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -95,7 +95,7 @@ public class Bot extends TelegramLongPollingBot {
 
         KeyboardRow keyboardSecondRow = new KeyboardRow();
         keyboardSecondRow.add("doge");
-        keyboardSecondRow.add("shiba");
+        keyboardSecondRow.add("etc");
 
         keyboard.add(keyboardFirstRow);
         keyboard.add(keyboardSecondRow);
